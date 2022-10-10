@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;500;700;900&family=Source+Serif+Pro:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External css -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Hello, world!</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="container-fluid p-0">
+      <!-- NAVBAR -->
+      <nav
+        class="text-black navbar navbar-dark container-fluid mb-5 sticky-top bg-primary"
+      >
+        <div class="container">
+          <div class="navbar">
+            <!-- <div class="navbar-content"> -->
+            <a class="navbar-brand" href="./index.html">
+              <div class="logo-image">
+                <img src="./images/LogoAdorn.1.png" class="img-fluid" />
+              </div>
+            </a>
+            <!-- <ul class="nav">
+            <li class="nav-item">Adorn</li>
+          </ul> -->
+            <a
+              class="navbar-brand"
+              style="left: 50px; font-weight: bolder; font-size: 30px"
+              href="./index.html"
+              >Adorn</a
+            >
+            <ul class="nav justify-content-end" style="margin-left: 200px">
+              <li class="nav-item">
+                <form class="form d-flex">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    style="height: 30px; margin-top: 5px; width: 250px"
+                    aria-label="Search"
+                  />
+                  <input
+                    class="btn btn-outline-light text-center"
+                    type="submit"
+                    style="
+                      height: 30px;
+                      margin-top: 5px;
+                      line-height: 0.5;
+                      width: 70px;
+                      padding: 0px;
+                    "
+                    value="Search"
+                  />
+                </form>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="explore.html">Explore</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Rankings.html">Rankings</a>
+              </li>
+              <li id="navbar-profile" class="nav-item ms-4">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="navbar-profile-name"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Hi Erick
+                  </button>
+                  <ul
+                    class="dropdown-menu text-center"
+                    aria-labelledby="navbar-profile-name"
+                  >
+                    <li>
+                      <a class="dropdown-item px-2" href="./profile.html"
+                        >Account</a
+                      >
+                    </li>
+                    <li>
+                      <button id="navbar-logout-button" class="btn btn-danger">
+                        logout
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li id="navbar-button-login" class="nav-item ms-4">
+                <a
+                  href="./login.html"
+                  class="bg-white text-primary btn btn-secondary"
+                >
+                  Sign In
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-6">
+            <h1 class="text-white header__title">
+              Discover, create, and sell <br />
+              extraordinary
+              <span class="text-primary">NFTs</span>
+            </h1>
+            <p class="text-white lh-base fs-5 mt-4">
+              The world's largest marketplace for non fungible token <br />
+              (NFT) artist and collector!
+            </p>
+            <button class="btn btn-primary btn-lg mt-4 fw-light">
+              Get Started
+            </button>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <div class="card card-featured-nft">
+              <img
+                src="./images/featured/galaxies.jpeg"
+                class="card-img-top"
+                style="height: 100%"
+                alt="..."
+              />
+              <div class="card-body bg-light">
+                <div class="row mb-3">
+                  <div class="col">
+                    <h6 class="text-secondary">Art</h6>
+                    <h4 class="card-title text-uppercase text-primary">
+                      Galaxies
+                    </h4>
+                  </div>
+                  <div
+                    class="col d-flex text-end align-items-center justify-content-end"
+                  >
+                    <h2 class="mb-0 fw-bold">0.988 ETH</h2>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <a
+                      href="transaction.html?src=./images/featured/galaxies.jpeg&nftName=Galaxies&currentBid=0.998"
+                      class="btn btn-primary w-100"
+                      >Place a bid</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="statistic-numbers bg-dark container-fluid py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="text-white">
+              <div class="d-flex justify-content-center">
+                <div class="text-center px-5">
+                  <h1 class="fw-bold">
+                    <span class="value">74000</span>
+                  </h1>
+                  <h6 class="text-white-50 fw-light">Artwork</h6>
+                </div>
+                <div class="text-center px-5">
+                  <h1 class="fw-bold value">16000</h1>
+                  <h6 class="text-white-50">Auction</h6>
+                </div>
+                <div class="text-center px-5">
+                  <h1 class="fw-bold value">9000</h1>
+                  <h6 class="text-white-50">Artists</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Most Popular -->
+    <section class="bg-light container-fluid py-5">
+      <div class="container">
+        <h2 class="text-center">Most Popular Arts</h2>
+        <div class="row">
+          <div
+            id="mostPopularWrapper"
+            class="col-12 my-4 position-relative p-0"
+          >
+            <div
+              id="mostPopularArtCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner py-3 px-1">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="card w-100 card-nft">
+                        <img
+                          src="./images/featured/silhouete.webp"
+                          class="card-img-top"
+                          style="height: 24rem"
+                          alt="Silhouette of Person Standing on Field"
+                        />
+                        <div
+                          class="card-body d-flex flex-column justify-content-between"
+                        >
+                          <div class="row mb-3">
+                            <div class="col">
+                              <h6 class="text-secondary">Photography</h6>
+                              <h4
+                                class="card-title text-uppercase text-primary"
+                              >
+                                Silhouette of Person
+                              </h4>
+                            </div>
+                            <div
+                              class="col d-flex text-end align-items-center justify-content-end"
+                            >
+                              <h2 class="mb-0 fw-bold text-dark">0.198 ETH</h2>
+                            </div>
+                          </div>
+                          <div class="row align-items-end">
+                            <div class="col">
+                              <a
+                                href="transaction.html?src=./images/featured/silhouete.webp&nftName=Silhouette of Person&currentBid=0.198&seller=andrzej_sapkowski"
+                                class="btn btn-primary w-100"
+                              >
+                                Place a bid
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="card w-100 card-nft">
+                        <img
+                          src="./images/featured/dock-sunset.webp"
+                          class="card-img-top"
+                          style="height: 24rem"
+                          alt="Dock  Sunset"
+                        />
+                        <div
+                          class="card-body d-flex flex-column justify-content-between"
+                        >
+                          <div class="row mb-3">
+                            <div class="col">
+                              <h6 class="text-secondary">Virtual</h6>
+                              <h4
+                                class="card-title text-uppercase text-primary"
+                              >
+                                Dock Sunset
+                              </h4>
+                            </div>
+                            <div
+                              class="col d-flex text-end align-items-center justify-content-end"
+                            >
+                              <h2 class="mb-0 fw-bold text-dark">10.00 ETH</h2>
+                            </div>
+                          </div>
+                          <div class="row align-items-end">
+                            <div class="col">
+                              <a
+                                href="transaction.html?src=./images/featured/dock-sunset.webp&nftName=Dock Sunset&currentBid=10.00&seller=andrzej_sapkowski"
+                                class="btn btn-primary w-100"
+                              >
+                                Place a bid
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="card w-100 card-nft">
+                        <img
+                          src="./images/featured/record.webp"
+                          class="card-img-top"
+                          style="height: 24rem"
+                          alt="Black Record"
+                        />
+                        <div
+                          class="card-body d-flex flex-column justify-content-between"
+                        >
+                          <div class="row mb-3">
+                            <div class="col">
+                              <h6 class="text-secondary">Music</h6>
+                              <h4
+                                class="card-title text-uppercase text-primary"
+                              >
+                                Black Record
+                              </h4>
+                            </div>
+                            <div
+                              class="col d-flex text-end align-items-center justify-content-end"
+                            >
+                              <h2 class="mb-0 fw-bold text-dark">0.410 ETH</h2>
+                            </div>
+                          </div>
+                          <div class="row align-items-end">
+                            <div class="col">
+                              <a
+                                href="transaction.html?src=./images/featured/record.webp&nftName=Black Record&currentBid=0.410&seller=andrzej_sapkowski"
+                                class="btn btn-primary w-100"
+                              >
+                                Place a bid
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="card w-100 card-nft">
+                        <img
+                          src="./images/featured/spiral.jpeg"
+                          class="card-img-top"
+                          style="height: 24rem"
+                          alt="Spiral"
+                        />
+                        <div
+                          class="card-body d-flex flex-column justify-content-between"
+                        >
+                          <div class="row mb-3">
+                            <div class="col">
+                              <h6 class="text-secondary">Art</h6>
+                              <h4
+                                class="card-title text-uppercase text-primary"
+                              >
+                                Spiral
+                              </h4>
+                            </div>
+                            <div
+                              class="col d-flex text-end align-items-center justify-content-end"
+                            >
+                              <h2 class="mb-0 fw-bold text-dark">53.20 ETH</h2>
+                            </div>
+                          </div>
+                          <div class="row align-items-end">
+                            <div class="col">
+                              <a
+                                href="transaction.html?src=./images/featured/spiral.jpeg&nftName=Spiral&currentBid=53.20&seller=andrzej_sapkowski"
+                                class="btn btn-primary w-100"
+                              >
+                                Place a bid
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="card w-100 card-nft">
+                        <img
+                          src="./images/featured/basket.jpeg"
+                          class="card-img-top"
+                          style="height: 24rem"
+                          alt="Basketball Court"
+                        />
+                        <div
+                          class="card-body d-flex flex-column justify-content-between"
+                        >
+                          <div class="row mb-3">
+                            <div class="col">
+                              <h6 class="text-secondary">Sport</h6>
+                              <h4
+                                class="card-title text-uppercase text-primary"
+                              >
+                                Basketball Court
+                              </h4>
+                            </div>
+                            <div
+                              class="col d-flex text-end align-items-center justify-content-end"
+                            >
+                              <h2 class="mb-0 fw-bold text-dark">12.40 ETH</h2>
+                            </div>
+                          </div>
+                          <div class="row align-items-end">
+                            <div class="col">
+                              <a
+                                href="transaction.html?src=./images/featured/basket.jpeg&nftName=Basketball Court&currentBid=12.40&seller=andrzej_sapkowski"
+                                class="btn btn-primary w-100"
+                              >
+                                Place a bid
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="card w-100 card-nft">
+                        <img
+                          src="./images/featured/racket.jpeg"
+                          class="card-img-top"
+                          style="height: 24rem"
+                          alt="Racket and Balls"
+                        />
+                        <div
+                          class="card-body d-flex flex-column justify-content-between"
+                        >
+                          <div class="row mb-3">
+                            <div class="col">
+                              <h6 class="text-secondary">Sport</h6>
+                              <h4
+                                class="card-title text-uppercase text-primary"
+                              >
+                                Racket and Balls
+                              </h4>
+                            </div>
+                            <div
+                              class="col d-flex text-end align-items-center justify-content-end"
+                            >
+                              <h2 class="mb-0 fw-bold text-dark">1.120 ETH</h2>
+                            </div>
+                          </div>
+                          <div class="row align-items-end">
+                            <div class="col">
+                              <a
+                                href="transaction.html?src=./images/featured/racket.jpeg&nftName=Racket and Balls&currentBid=1.120&seller=andrzej_sapkowski"
+                                class="btn btn-primary w-100"
+                              >
+                                Place a bid
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="card w-100 card-nft">
+                        <img
+                          src="./images/featured/yellow-and-brown.jpeg"
+                          class="card-img-top"
+                          style="height: 24rem"
+                          alt="Yellow and Brown"
+                        />
+                        <div
+                          class="card-body d-flex flex-column justify-content-between"
+                        >
+                          <div class="row mb-3">
+                            <div class="col">
+                              <h6 class="text-secondary">Art</h6>
+                              <h4
+                                class="card-title text-uppercase text-primary"
+                              >
+                                Yellow and Brown
+                              </h4>
+                            </div>
+                            <div
+                              class="col d-flex text-end align-items-center justify-content-end"
+                            >
+                              <h2 class="mb-0 fw-bold text-dark">7.500 ETH</h2>
+                            </div>
+                          </div>
+                          <div class="row align-items-end">
+                            <div class="col">
+                              <a
+                                href="transaction.html?src=./images/featured/yellow-and-brown.jpeg&nftName=Yellow and Brown&currentBid=7.50&seller=andrzej_sapkowski"
+                                class="btn btn-primary w-100"
+                              >
+                                Place a bid
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="card w-100 card-nft">
+                        <img
+                          src="./images/featured/textured.webp"
+                          class="card-img-top"
+                          style="height: 24rem"
+                          alt="Textured Ball"
+                        />
+                        <div
+                          class="card-body d-flex flex-column justify-content-between"
+                        >
+                          <div class="row mb-3">
+                            <div class="col">
+                              <h6 class="text-secondary">Virtual</h6>
+                              <h4
+                                class="card-title text-uppercase text-primary"
+                              >
+                                Textured Ball
+                              </h4>
+                            </div>
+                            <div
+                              class="col d-flex text-end align-items-center justify-content-end"
+                            >
+                              <h2 class="mb-0 fw-bold text-dark">0.140 ETH</h2>
+                            </div>
+                          </div>
+                          <div class="row align-items-end">
+                            <div class="col">
+                              <a
+                                href="transaction.html?src=./images/featured/textured.webp&nftName=Textured Ball&currentBid=0.140"
+                                class="btn btn-primary w-100"
+                              >
+                                Place a bid
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="card w-100 card-nft">
+                        <img
+                          src="./images/featured/yellowred.webp"
+                          class="card-img-top"
+                          style="height: 24rem"
+                          alt="YellowRed Citrus"
+                        />
+                        <div
+                          class="card-body d-flex flex-column justify-content-between"
+                        >
+                          <div class="row mb-3">
+                            <div class="col">
+                              <h6 class="text-secondary">Photography</h6>
+                              <h4
+                                class="card-title text-uppercase text-primary"
+                              >
+                                YellowRed Citrus
+                              </h4>
+                            </div>
+                            <div
+                              class="col d-flex text-end align-items-center justify-content-end"
+                            >
+                              <h2 class="mb-0 fw-bold text-dark">6.89 ETH</h2>
+                            </div>
+                          </div>
+                          <div class="row align-items-end">
+                            <div class="col">
+                              <a
+                                href="transaction.html?src=./images/featured/yellowred.webp&nftName=YellowRed Citrus&currentBid=6.89"
+                                class="btn btn-primary w-100"
+                              >
+                                Place a bid
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="slide-prev"
+              href="#mostPopularArtCarousel"
+              role="button"
+              data-bs-slide="prev"
+            >
+              <i class="bi bi-chevron-left text-white"></i>
+            </button>
+            <button
+              class="slide-next"
+              href="#mostPopularArtCarousel"
+              role="button"
+              data-bs-slide="next"
+            >
+              <i class="bi bi-chevron-right text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category -->
+    <section class="bg-light text-black container-fluid py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col d-flex">
+            <h2 class="fw-bold mb-0 mx-auto">Category</h2>
+          </div>
+          <!-- Row 1 -->
+          <div
+            class="row row-flex align-items-center mx-auto justify-content-around"
+            style="margin-top: 2rem"
+          >
+            <div class="card w-25 bg-light">
+              <img
+                src="./assets/category/index-category-art.png"
+                class="card-img-top rounded align-items-center mx-auto"
+                style="height: 10rem; width: 10rem"
+                alt="Art"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="row mb-3">
+                  <div class="col text-center">
+                    <button
+                      class="btn btn-primary btn-block btn-lg text-white font-weight-bold"
+                    >
+                      Art
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card w-25 bg-light">
+              <img
+                src="./assets/category/index-category-collection.png"
+                class="card-img-top rounded align-items-center mx-auto"
+                style="height: 10rem; width: 10rem"
+                alt="Collection"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="row mb-3">
+                  <div class="col text-center">
+                    <button
+                      class="btn btn-primary btn-block btn-lg text-white font-weight-bold"
+                    >
+                      Collection
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card w-25 bg-light">
+              <img
+                src="./assets/category/index-category-domain.png"
+                class="card-img-top rounded align-items-center mx-auto"
+                style="height: 10rem; width: 10rem"
+                alt="Domain"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="row mb-3">
+                  <div class="col text-center">
+                    <button
+                      class="btn btn-primary btn-block btn-lg text-white font-weight-bold"
+                    >
+                      Domain
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Row 2 -->
+          <div
+            class="row row-flex align-items-center mx-auto justify-content-around"
+          >
+            <div class="card w-25 bg-light">
+              <img
+                src="./assets/category/index-category-music.png"
+                class="card-img-top rounded align-items-center mx-auto"
+                style="height: 10rem; width: 10rem"
+                alt="Music"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="row mb-3">
+                  <div class="col text-center">
+                    <button
+                      class="btn btn-primary btn-block btn-lg text-white font-weight-bold"
+                    >
+                      Music
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card w-25 bg-light">
+              <img
+                src="./assets/category/index-category-photography1.png"
+                class="card-img-top rounded align-items-center mx-auto"
+                style="height: 10rem; width: auto"
+                alt="Photography"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="row mb-3">
+                  <div class="col text-center">
+                    <button
+                      class="btn btn-primary btn-block btn-lg text-white font-weight-bold"
+                    >
+                      Photography
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card w-25 bg-light">
+              <img
+                src="./assets/category/index-cateogry-sport1.png"
+                class="card-img-top rounded align-items-center mx-auto"
+                style="height: 10rem; width: 10rem"
+                alt="Sport"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="row mb-3">
+                  <div class="col text-center">
+                    <button
+                      class="btn btn-primary btn-block btn-lg text-white font-weight-bold"
+                    >
+                      Sport
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Row 3 -->
+          <div
+            class="row row-flex align-items-center mx-auto justify-content-around"
+          >
+            <div class="card w-25 bg-light">
+              <img
+                src="./assets/category/index-category-card.png"
+                class="card-img-top rounded align-items-center mx-auto"
+                style="height: 10rem; width: 10rem"
+                alt="Trading Card"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="row mb-3">
+                  <div class="col text-center">
+                    <button
+                      class="btn btn-primary btn-block btn-lg text-white font-weight-bold"
+                    >
+                      Trading card
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card w-25 bg-light">
+              <img
+                src="./assets/category/index-category-utility.png"
+                class="card-img-top rounded align-items-center mx-auto"
+                style="height: 10rem; width: 10rem"
+                alt="Utility"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="row mb-3">
+                  <div class="col text-center">
+                    <button
+                      class="btn btn-primary btn-block btn-lg text-white font-weight-bold"
+                    >
+                      Utility
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card w-25 bg-light">
+              <img
+                src="./assets/category/index-category-virtual world.png"
+                class="card-img-top rounded align-items-center mx-auto"
+                style="height: 10rem; width: auto"
+                alt="Virtual World"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div class="row mb-3">
+                  <div class="col text-center">
+                    <button
+                      class="btn btn-primary btn-block btn-lg text-white font-weight-bold"
+                    >
+                      Virtual World
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Category end-->
+    <!-- Top Seller -->
+    <section
+      class="text-white container-fluid py-5"
+      style="background-color: #051821"
+    >
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-6 d-flex align-items-center justify-content-center mx-auto"
+            style="margin-bottom: 2rem"
+          >
+            <h3 class="fw-bold mb-0">Top Seller</h3>
+          </div>
+
+          <!-- Sort Dropdown -->
+          <div class="dropdown" style="margin-bottom: 2rem">
+            <button
+              class="btn dropdown-toggle text-white"
+              style="width: 10rem"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              id="sortDropdownButton"
+            >
+              Sort
+              <span class="caret"></span>
+            </button>
+            <ul
+              class="dropdown-menu bg-primary text-white"
+              aria-labelledby="dropdownMenu1"
+            >
+              <li class="dropdown-item">
+                <a
+                  href="#"
+                  data-value="This Week"
+                  class="text-white"
+                  style="text-decoration: none"
+                  >This Week</a
+                >
+              </li>
+              <li class="dropdown-item">
+                <a
+                  href="#"
+                  data-value="This Month"
+                  class="text-white"
+                  style="text-decoration: none"
+                  >This Month</a
+                >
+              </li>
+              <li class="dropdown-item">
+                <a
+                  href="#"
+                  data-value="This Year"
+                  class="text-white"
+                  style="text-decoration: none"
+                  >This Year</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Sort Dropdown end -->
+
+          <table
+            class="table table-striped table-dark table-hover table-bordered text-center"
+            style="border: white"
+          >
+            <tbody>
+              <!-- 1 -->
+              <tr>
+                <td class="text-white align-middle">1</td>
+                <td>
+                  <img
+                    src="./assets/NFT/1 - NFT Bored Ape Yacht Club-20211214165446.webp"
+                    class="rounded-circle"
+                    style="height: 3rem; width: 3rem"
+                    alt="Bored Ape NFT"
+                  />
+                </td>
+                <td class="text-white align-middle">
+                  <h6>Bored Ape NFT</h6>
+                </td>
+                <td class="text-white align-middle">
+                  <h6>Floor Price : 103</h6>
+                </td>
+              </tr>
+              <!-- 2 -->
+              <tr>
+                <td class="text-white align-middle">2</td>
+                <td>
+                  <img
+                    src="./assets/NFT/2 - Mutant Ape Yacht.png"
+                    class="rounded-circle"
+                    style="height: 3rem; width: 3rem"
+                    alt="Mutant Ape Yacht"
+                  />
+                </td>
+                <td class="text-white align-middle">
+                  <h6>Mutant Ape Yacht</h6>
+                </td>
+                <td class="text-white align-middle">
+                  <h6>Floor Price : 23.6</h6>
+                </td>
+              </tr>
+              <!-- 3 -->
+              <tr>
+                <td class="text-white align-middle">3</td>
+                <td>
+                  <img
+                    src="./assets/NFT/3 - Kaizoku Mechanics.jpg"
+                    class="rounded-circle"
+                    style="height: 3rem; width: 3rem"
+                    alt="Kaizoku Mechanics"
+                  />
+                </td>
+                <td class="text-white align-middle">
+                  <h6>Kaizoku Mechanics</h6>
+                </td>
+                <td class="text-white align-middle">
+                  <h6>Floor Price : 20.12</h6>
+                </td>
+              </tr>
+              <!-- 4 -->
+              <tr>
+                <td class="text-white align-middle">4</td>
+                <td>
+                  <img
+                    src="./assets/NFT/4 - nft-from-cryptopunk-collection-was-mistakenly-sold-for-less-than-0.01.jpg"
+                    class="rounded-circle"
+                    style="height: 3rem; width: 3rem"
+                    alt="CryptoPunk NFT"
+                  />
+                </td>
+                <td class="text-white align-middle">
+                  <h6>CryptoPunk NFT</h6>
+                </td>
+                <td class="text-white align-middle">
+                  <h6>Floor Price : 19.94</h6>
+                </td>
+              </tr>
+              <!-- 5 -->
+              <tr>
+                <td class="text-white align-middle">5</td>
+                <td>
+                  <img
+                    src="./assets/NFT/5 - Muri by Haus NFT.webp"
+                    class="rounded-circle"
+                    style="height: 3rem; width: 3rem"
+                    alt="Muri by Haus"
+                  />
+                </td>
+                <td class="text-white align-middle">
+                  <h6>Muri by Haus</h6>
+                </td>
+                <td class="text-white align-middle">
+                  <h6>Floor Price : 0.73</h6>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="pagination justify-content-center" id="tablePagination">
+            <li class="page-item">
+              <a class="page-link" href="#">prev</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">4</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">5</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">next</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Top Seller end -->
+    <!-- Content -->
+    <div id="content-wrap"></div>
+    <!-- Content end -->
+
+    <!-- footer -->
+    <div id="footer">
+      <footer class="text-center text-lg-start text-white bg-primary">
+        <div class="container p-4 pb-0">
+          <section class="">
+            <div class="row">
+              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Adorn</h6>
+                <p>
+                  Indonesia first and largest digital marketplace for crypto
+                  collectibles and non-fungible tokens (NFT). Buy, sell and
+                  discover exclusive digital items.
+                </p>
+              </div>
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">
+                  MarketPlace
+                </h6>
+                <p>
+                  <a class="text-white" style="text-decoration: none"
+                    >All NFT</a
+                  >
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none">Art</a>
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none"
+                    >Collectibles</a
+                  >
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none"
+                    >Domain Names</a
+                  >
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none">Music</a>
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none"
+                    >Photography</a
+                  >
+                </p>
+              </div>
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Resources</h6>
+                <p>
+                  <a class="text-white" style="text-decoration: none"
+                    >Help Center</a
+                  >
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none"
+                    >Partners</a
+                  >
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none">Taxes</a>
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none"
+                    >Newsletter</a
+                  >
+                </p>
+              </div>
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                <p><i class="fa fa-home mr-3"></i>Binus, Kemanggisan, ID</p>
+                <p><i class="fa fa-envelope mr-3"></i> multimedia@gmail.com</p>
+                <p><i class="fa fa-phone mr-3"></i> + 12 34 56 78</p>
+                <p><i class="fa fa-print mr-3"></i> + 12 34 56 78</p>
+              </div>
+            </div>
+          </section>
+
+          <hr class="my-3" />
+
+          <!-- Section: Copyright -->
+          <section class="p-3 pt-0">
+            <div class="row d-flex align-items-center">
+              <div class="col-md-7 col-lg-8 text-center text-md-start">
+                <div class="p-3">
+                  © 2020 Copyright :
+                  <a class="text-white" href="#" style="text-decoration: none"
+                    >MultimediaNFT</a
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                <!-- Facebook -->
+                <a
+                  class="btn btn-outline-light btn-floating m-1"
+                  class="text-white"
+                  role="button"
+                  ><i class="fa fa-facebook-f"></i
+                ></a>
+
+                <!-- Twitter -->
+                <a
+                  class="btn btn-outline-light btn-floating m-1"
+                  class="text-white"
+                  role="button"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+
+                <!-- Google -->
+                <a
+                  class="btn btn-outline-light btn-floating m-1"
+                  class="text-white"
+                  role="button"
+                  ><i class="fa fa-google"></i
+                ></a>
+
+                <!-- Instagram -->
+                <a
+                  class="btn btn-outline-light btn-floating m-1"
+                  class="text-white"
+                  role="button"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </footer>
+    </div>
+    <!-- footer end -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/global.js"></script>
+    <script>
+      $(window).scroll(scrollStatistics);
+      var viewed = false;
+
+      $(document).ready(function () {
+        $("ul.navbar-nav > li").click(function (e) {
+          $("ul.navbar-nav > li").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+
+      function isScrolledIntoView(elem) {
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
+
+        var elemTop = $(elem).offset().top;
+        var elemBottom = elemTop + $(elem).height();
+
+        return elemBottom <= docViewBottom && elemTop >= docViewTop;
+      }
+
+      function scrollStatistics() {
+        if (isScrolledIntoView($(".statistic-numbers")) && !viewed) {
+          viewed = true;
+          $(".value").each(function () {
+            $(this)
+              .prop("Counter", 0)
+              .animate(
+                {
+                  Counter: $(this).text(),
+                },
+                {
+                  duration: 4000,
+                  easing: "swing",
+                  step: function (now) {
+                    $(this).text(Math.ceil(now).toLocaleString());
+                  },
+                }
+              );
+          });
+        }
+      }
+    </script>
+
+    <!-- Top Seller Sort -->
+    <script>
+      $(".dropdown-menu li a").click(function () {
+        $(this)
+          .parents(".dropdown")
+          .find(".btn")
+          .html($(this).text() + ' <span class="caret"></span>');
+        $(this).parents(".dropdown").find(".btn").val($(this).data("value"));
+      });
+    </script>
+  </body>
+</html>

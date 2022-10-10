@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;500;700;900&family=Source+Serif+Pro:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="navbar.css" />
+
+    <title>Explore Collection</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .fav{
+        color:red;
+      }
+
+      .not-fav{
+        color:grey;
+        
+      }
+
+      .btn-fav{
+        cursor: pointer;
+        font-size: 1.5rem;
+      }
+
+    </style>
+  </head>
+  <body style="background-color: #051821">
+    <!-- navbar section -->
+    <nav
+      class="text-black navbar navbar-dark container-fluid mb-5 sticky-top bg-primary"
+    >
+      <div class="container">
+        <div class="navbar">
+          <!-- <div class="navbar-content"> -->
+          <a class="navbar-brand" href="./index.html">
+            <div class="logo-image">
+              <img src="./images/LogoAdorn.1.png" class="img-fluid" />
+            </div>
+          </a>
+          <!-- <ul class="nav">
+            <li class="nav-item">Adorn</li>
+          </ul> -->
+          <a
+            class="navbar-brand"
+            style="left: 50px; font-weight: bolder; font-size: 30px"
+            href="./index.html"
+            >Adorn</a
+          >
+          <ul class="nav justify-content-end" style="margin-left: 200px">
+            <li class="nav-item">
+              <form class="form d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  style="height: 30px; margin-top: 5px; width: 250px"
+                  aria-label="Search"
+                />
+                <input
+                  class="btn btn-outline-light text-center"
+                  type="submit"
+                  style="
+                    height: 30px;
+                    margin-top: 5px;
+                    line-height: 0.5;
+                    width: 70px;
+                    padding: 0px;
+                  "
+                  value="Search"
+                />
+              </form>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="explore.html">Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Rankings.html">Rankings</a>
+            </li>
+            <li id="navbar-profile" class="nav-item ms-4">
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="navbar-profile-name"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Hi Erick
+                </button>
+                <ul
+                  class="dropdown-menu text-center"
+                  aria-labelledby="navbar-profile-name"
+                >
+                  <li>
+                    <a class="dropdown-item px-2" href="./profile.html"
+                      >Account</a
+                    >
+                  </li>
+                  <li>
+                    <button id="navbar-logout-button" class="btn btn-danger">
+                      logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li id="navbar-button-login" class="nav-item ms-4">
+              <a
+                href="./login.html"
+                class="bg-white text-primary btn btn-secondary"
+              >
+                Sign In
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar section end -->
+
+    <!-- EXPLORE SECTION -->
+    <div class="py-5 mb-4">
+      <div class="container">
+        <!-- Featured artist -->
+        <div class="row my-3">
+          <div class="col-12">
+            <h1 class="fw-bold mb-4" style="color: white">Featured Artist</h1>
+          </div>
+          <div class="col-12 owl-carousel owl-theme">
+            <div class="item">
+              <div class="card">
+                <img
+                  src="./images/explore-man-1.jpg"
+                  style="height: 20rem"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <div class="card-body row text-center">
+                    <div class="col-12">
+                      <h3>Radit Putra</h3>
+                    </div>
+                    <div class="col-12">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div>
+                      <a href="seller-profile.html?src=./images/explore-man-1.jpg&name=Radit Putra" class="btn btn-primary">Show More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card">
+                <img
+                  src="./images/explore-woman-1.jpg"
+                  style="height: 20rem"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <div class="card-body row text-center">
+                    <div class="col-12">
+                      <h3>Farah Safitri</h3>
+                    </div>
+                    <div class="col-12">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div>
+                      <a href="seller-profile.html?src=./images/explore-woman-1.jpg&name=Farah Safitri" class="btn btn-primary">Show More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card">
+                <img
+                  src="./images/explore-woman-2.jpg"
+                  style="height: 20rem"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <div class="card-body row text-center">
+                    <div class="col-12">
+                      <h3>Clarissa Sucipto</h3>
+                    </div>
+                    <div class="col-12">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div>
+                      <a href="seller-profile.html?src=./images/explore-woman-2.jpg&name=Clarissa Sucipto" class="btn btn-primary">Show More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card">
+                <img
+                  src="./images/explore-man-2.jpg"
+                  style="height: 20rem"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <div class="card-body row text-center">
+                    <div class="col-12">
+                      <h3>Purwa Kuswoyo</h3>
+                    </div>
+                    <div class="col-12">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div>
+                      <a href="seller-profile.html?src=./images/explore-man-2.jpg&name=Purwa Kuswoyo" class="btn btn-primary">Show More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card">
+                <img
+                  src="./images/explore-man-3.jpg"
+                  style="height: 20rem"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <div class="card-body row text-center">
+                    <div class="col-12">
+                      <h3>Rafi Sinaga</h3>
+                    </div>
+                    <div class="col-12">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div>
+                      <a href="seller-profile.html?src=./images/explore-man-3.jpg&name=Rafi Sinaga" class="btn btn-primary">Show More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- nft artwork -->
+        <div class="row mt-5 pt-5">
+          <div class="row">
+            <div class="col-4 bg-white px-3 py-4" style="position: sticky; top: 150px; height: fit-content; border-radius: 10px;">
+              <div class="row align-items-center justify-content">
+                <div class="col-12">
+                  <h1 class="fw-bold text-center">NFT & Artwork</h1>
+                </div>
+                <div class="col-12 px-3 mt-3">
+                  <h4>Search</h4>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search here..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-primary" type="button" id="button-addon2"><i class="fa fa-search" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+                <div class="col-12 my-3 px-3">
+                  <h4>Category</h4>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected disabled>Add Category</option>
+                    <option value="">Trending</option>
+                    <option value="">Top</option>
+                    <option value="">Art</option>
+                    <option value="">Domain</option>
+                    <option value="">Music</option>
+                    <option value="">Photography</option>
+                    <option value="">Sports</option>
+                    <option value="">Trading Card</option>
+                    <option value="">Utility</option>
+                    <option value="">Virtual Word</option>
+                  </select>
+                </div>
+                <div class="col-12 d-flex align-items-center flex-wrap">
+                  <span class="btn btn-primary my-1 mx-2" style="min-width:100px">Trending <i class="fa fa-times ms-3" aria-hidden="true"></i></span>
+                  <span class="btn btn-primary my-1 mx-2" style="min-width:100px">Art <i class="fa fa-times ms-3" aria-hidden="true"></i></span>
+                  <span class="btn btn-primary my-1 mx-2" style="min-width:100px">Photography <i class="fa fa-times ms-3" aria-hidden="true"></i></span>
+                </div>
+                <div class="col-12 mt-4 px-3">
+                  <h4>Price</h4>
+                </div>
+                <div class="col-6 px-3">
+                  <h6>Minimal</h6>
+                  <input type="text" style="border-radius: 10px; height: 45px; border: 1px solid black;">
+                </div>
+                <div class="col-6 px-3">
+                  <h6>Maximal</h6>
+                  <input type="text" style="border-radius: 10px; height: 45px; border: 1px solid black;">
+                </div>
+                <div class="col-12 mt-3 text-end">
+                  <button class="btn btn-outline-primary" style="border-radius: 10px;">Filter Price</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="row">
+                <div class="col-4">
+                  <div class="card explore-card">
+                    <img
+                      src="./images/featured/yellow-and-brown.jpeg"
+                      style="height: 15rem"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body text-center pb-0">
+                      <h4 class="card-title">YELLOW AND BROWN</h4>
+                      <p>By: Andrzej Sapkowski</p>
+                      <div class="row justify-content align-items-center mt-3">
+                        <div class="col-8 mb-4">
+                          <a href="transaction.html?src=./images/featured/yellow-and-brown.jpeg&nftName=Yellow and Brown&currentBid=7.50&seller=andrzej_sapkowski" class="btn btn-primary">Place a Bid</a>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center mb-4">
+                          <i class="fa fa-heart btn-fav not-fav" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card explore-card">
+                    <img
+                      src="./images/nft-explore-2.jpg"
+                      style="height: 15rem"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body text-center pb-0">
+                      <h4 class="card-title">HOTEL SIGN IN THE NIGHT</h4>
+                      <p>By: Adiarja Pradipta</p>
+                      <div class="row justify-content align-items-center mt-3">
+                        <div class="col-8 mb-4">
+                          <a href="transaction.html?src=./images/nft-explore-2.jpg&nftName=HOTEL SIGN IN THE NIGHT&currentBid=6.50&seller=adiarja_pradipta" class="btn btn-primary">Place a Bid</a>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center mb-4">
+                          <i class="fa fa-heart btn-fav not-fav" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card explore-card">
+                    <img
+                      src="./images/nft-explore-3.jpg"
+                      style="height: 15rem"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body text-center pb-0">
+                      <h4 class="card-title">MEXICAN OLD MAN</h4>
+                      <p>By: Latif Gunawan</p>
+                      <div class="row justify-content align-items-center mt-3">
+                        <div class="col-8 mb-4">
+                          <a href="transaction.html?src=./images/nft-explore-3.jpg&nftName=MEXICAN OLD MAN&currentBid=6.50&seller=latif_gunawan" class="btn btn-primary">Place a Bid</a>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center mb-4">
+                          <i class="fa fa-heart btn-fav not-fav" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="my-3"></div>
+                <div class="col-4">
+                  <div class="card explore-card">
+                    <img
+                      src="./images/nft-explore-4.jpg"
+                      style="height: 15rem"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body text-center pb-0">
+                      <h4 class="card-title">CAKRAWALA</h4>
+                      <p>By: Radit Putra</p>
+                      <div class="row justify-content align-items-center mt-3">
+                        <div class="col-8 mb-4">
+                          <a href="transaction.html?src=./images/nft-explore-4.jpg&nftName=CAKRAWALA&currentBid=6.50&seller=radit_putra" class="btn btn-primary">Place a Bid</a>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center mb-4">
+                          <i class="fa fa-heart btn-fav not-fav" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card explore-card">
+                    <img
+                      src="./images/nft-explore-5.jpg"
+                      style="height: 15rem"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body text-center pb-0">
+                      <h4 class="card-title">LANGIT</h4>
+                      <p>By: Radit Putra</p>
+                      <div class="row justify-content align-items-center mt-3">
+                        <div class="col-8 mb-4">
+                          <a href="transaction.html?src=./images/nft-explore-5.jpg&nftName=LANGIT&currentBid=6.50&seller=radit_putra" class="btn btn-primary">Place a Bid</a>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center mb-4">
+                          <i class="fa fa-heart btn-fav not-fav" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card explore-card">
+                    <img
+                      src="./images/nft-explore-6.jpg"
+                      style="height: 15rem"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body text-center pb-0">
+                      <h4 class="card-title">THE CASTLE</h4>
+                      <p>By: Siti Zulaika</p>
+                      <div class="row justify-content align-items-center mt-3">
+                        <div class="col-8 mb-4">
+                          <a href="transaction.html?src=./images/nft-explore-6.jpg&nftName=THE CASTLE&currentBid=6.50&seller=siti_zulaika" class="btn btn-primary">Place a Bid</a>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center mb-4">
+                          <i class="fa fa-heart btn-fav not-fav" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="my-3"></div>
+                <div class="col-4">
+                  <div class="card explore-card">
+                    <img
+                      src="./images/nft-explore-7.jpg"
+                      style="height: 15rem"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body text-center pb-0">
+                      <h4 class="card-title">PADANG GURUN</h4>
+                      <p>By: Kiki Saputra</p>
+                      <div class="row justify-content align-items-center mt-3">
+                        <div class="col-8 mb-4">
+                          <a href="transaction.html?src=./images/nft-explore-7.jpg&nftName=PADANG GURUN&currentBid=6.50&seller=kiki_saputra" class="btn btn-primary">Place a Bid</a>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center mb-4">
+                          <i class="fa fa-heart btn-fav not-fav" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card explore-card">
+                    <img
+                      src="./images/nft-explore-8.jpg"
+                      style="height: 15rem"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body text-center pb-0">
+                      <h4 class="card-title">MONOKROM</h4>
+                      <p>By: Mariadi Rajasa</p>
+                      <div class="row justify-content align-items-center mt-3">
+                        <div class="col-8 mb-4">
+                          <a href="transaction.html?src=./images/nft-explore-8.jpg&nftName=MONOKROM&currentBid=6.50&seller=mariadi_rajasa" class="btn btn-primary">Place a Bid</a>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center mb-4">
+                          <i class="fa fa-heart btn-fav not-fav" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card explore-card">
+                    <img
+                      src="./images/nft-explore-9.jpg"
+                      style="height: 15rem"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body text-center pb-0">
+                      <h4 class="card-title">LONG ROAD</h4>
+                      <p>By: Indah Puspasari</p>
+                      <div class="row justify-content align-items-center mt-3">
+                        <div class="col-8 mb-4">
+                          <a href="transaction.html?src=./images/nft-explore-9s.jpg&nftName=LONG ROAD&currentBid=6.50&seller=indah_puspasari" class="btn btn-primary">Place a Bid</a>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center mb-4">
+                          <i class="fa fa-heart btn-fav not-fav" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- EXPLORE SECTION END -->
+
+    <!-- footer -->
+    <div id="footer">
+      <footer class="text-center text-lg-start text-white bg-primary">
+        <div class="container p-4 pb-0">
+          <section class="">
+            <div class="row">
+              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Adorn</h6>
+                <p>
+                  Indonesia first and largest digital marketplace for crypto
+                  collectibles and non-fungible tokens (NFT). Buy, sell and
+                  discover exclusive digital items.
+                </p>
+              </div>
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">
+                  MarketPlace
+                </h6>
+                <p>
+                  <a class="text-white" style="text-decoration: none"
+                    >All NFT</a
+                  >
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none">Art</a>
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none"
+                    >Collectibles</a
+                  >
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none"
+                    >Domain Names</a
+                  >
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none">Music</a>
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none"
+                    >Photography</a
+                  >
+                </p>
+              </div>
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Resources</h6>
+                <p>
+                  <a class="text-white" style="text-decoration: none"
+                    >Help Center</a
+                  >
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none"
+                    >Partners</a
+                  >
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none">Taxes</a>
+                </p>
+                <p>
+                  <a class="text-white" style="text-decoration: none"
+                    >Newsletter</a
+                  >
+                </p>
+              </div>
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                <p><i class="fa fa-home mr-3"></i>Binus, Kemanggisan, ID</p>
+                <p><i class="fa fa-envelope mr-3"></i> multimedia@gmail.com</p>
+                <p><i class="fa fa-phone mr-3"></i> + 12 34 56 78</p>
+                <p><i class="fa fa-print mr-3"></i> + 12 34 56 78</p>
+              </div>
+            </div>
+          </section>
+
+          <hr class="my-3" />
+
+          <!-- Section: Copyright -->
+          <section class="p-3 pt-0">
+            <div class="row d-flex align-items-center">
+              <div class="col-md-7 col-lg-8 text-center text-md-start">
+                <div class="p-3">
+                  © 2020 Copyright :
+                  <a class="text-white" href="#" style="text-decoration: none"
+                    >MultimediaNFT</a
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                <!-- Facebook -->
+                <a
+                  class="btn btn-outline-light btn-floating m-1"
+                  class="text-white"
+                  role="button"
+                  ><i class="fa fa-facebook-f"></i
+                ></a>
+
+                <!-- Twitter -->
+                <a
+                  class="btn btn-outline-light btn-floating m-1"
+                  class="text-white"
+                  role="button"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+
+                <!-- Google -->
+                <a
+                  class="btn btn-outline-light btn-floating m-1"
+                  class="text-white"
+                  role="button"
+                  ><i class="fa fa-google"></i
+                ></a>
+
+                <!-- Instagram -->
+                <a
+                  class="btn btn-outline-light btn-floating m-1"
+                  class="text-white"
+                  role="button"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </footer>
+    </div>
+    <!-- footer end -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- owl carousel -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/global.js"></script>
+    <script>
+      var owl = $(".owl-carousel");
+      owl.owlCarousel({
+        autoplay: true,
+        center: true,
+        loop: true,
+        lazyLoad: true,
+        margin: 10,
+        dots: false,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          960: {
+            items: 4,
+          },
+        },
+      });
+
+      function updateTextInput(val) {
+          document.getElementById('textInput').value=val; 
+        }
+
+        $( ".btn-fav" ).click(function() {
+          if($(this).hasClass("fav")){
+            $(this).removeClass("fav")
+            $(this).addClass("not-fav")
+          } else {
+            $(this).addClass("fav")
+            $(this).removeClass("not-fav")
+          }
+          
+
+        });
+    </script>
+    <!-- owl carousel end -->
+  </body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;500;700;900&family=Source+Serif+Pro:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External css -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Rankings</title>
+</head>
+    <body>
+     <!-- NAVBAR -->
+    <nav
+    class="text-black navbar navbar-dark container-fluid mb-5 sticky-top bg-primary"
+  >
+    <div class="container" style="position: relative; right: 100px;">
+      <div class="navbar">
+        <!-- <div class="navbar-content"> -->
+        <a class="navbar-brand" href="./index.html">
+          <div class="logo-image">
+            <img src="./images/LogoAdorn.1.png" class="img-fluid" />
+          </div>
+        </a>
+        <!-- <ul class="nav">
+          <li class="nav-item">Adorn</li>
+        </ul> -->
+        <a
+          class="navbar-brand"
+          style="left: 50px; font-weight: bolder; font-size: 30px"
+          href="./index.html"
+          >Adorn</a
+        >
+        <ul class="nav justify-content-end" style="margin-left: 200px">
+          <li class="nav-item">
+            <form class="form d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                style="height: 30px; margin-top: 5px; width: 250px"
+                aria-label="Search"
+              />
+              <input
+                class="btn btn-outline-light text-center"
+                type="submit"
+                style="
+                  height: 30px;
+                  margin-top: 5px;
+                  line-height: 0.5;
+                  width: 70px;
+                  padding: 0px;
+                "
+                value="Search"
+              />
+            </form>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="explore.html">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Rankings.html">Rankings</a>
+          </li>
+          <li id="navbar-profile" class="nav-item ms-4">
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="navbar-profile-name"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Hi Erick
+              </button>
+              <ul
+                class="dropdown-menu text-center"
+                aria-labelledby="navbar-profile-name"
+              >
+                <li>
+                  <a class="dropdown-item px-2" href="./profile.html"
+                    >Account</a
+                  >
+                </li>
+                <li>
+                  <button id="navbar-logout-button" class="btn btn-danger">
+                    logout
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li id="navbar-button-login" class="nav-item ms-4">
+            <a
+              href="./login.html"
+              class="bg-white text-primary btn btn-secondary"
+            >
+              Sign In
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- NAVBAR END -->
+      <!-- Table -->
+      <div class="pb-1" style="background-color: white;">
+          <h2 class="text-center mb-4">
+            Rankings
+          </h2>
+          <!-- Sort Dropdown -->
+            <div class="dropdown" style="margin-bottom: 2rem; margin-left: 15rem;">
+                <button class="btn dropdown-toggle text-white" style="width: 10rem;" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="sortDropdownButton">
+                Sort
+                <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu bg-primary text-white" aria-labelledby="dropdownMenu1">
+                <li class="dropdown-item"><a href="#" data-value="Seller" class="text-white" style="text-decoration: none; ">Seller</a></li>
+                <li class="dropdown-item"><a href="#" data-value="Buyer" class="text-white" style="text-decoration: none;">Buyer</a></li>
+                <li class="dropdown-item"><a href="#" data-value="Overall" class="text-white" style="text-decoration: none;">Overall</a></li>
+                </ul>
+            </div>
+            <!-- Sort Dropdown end -->
+            <div style="margin-left: 7rem; margin-right: 7rem;">
+                <table
+                    class="table table-striped table-hover table-bordered text-center mx-auto"
+                    >
+                    <thead>
+                        <tr>
+                            <th>
+                                Rank
+                            </th>
+                            <th>
+                                Profile Picture
+                            </th>
+                            <th>
+                                Username
+                            </th>
+                            <th>
+                                Floor Price
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <!-- 1 -->
+                    <tr>
+                        <td class="align-middle">1</td>
+                        <td>
+                        <img
+                            src="./assets/NFT/1 - NFT Bored Ape Yacht Club-20211214165446.webp"
+                            class="rounded-circle"
+                            style="height: 3rem; width: 3rem"
+                            alt="Bored Ape NFT"
+                        />
+                        </td>
+                        <td class="align-middle">
+                        <h6>Bored Ape NFT</h6>
+                        </td>
+                        <td class="align-middle">
+                        <h6>103</h6>
+                        </td>
+                    </tr>
+                    <!-- 2 -->
+                    <tr>
+                        <td class="align-middle">2</td>
+                        <td>
+                        <img
+                            src="./assets/NFT/2 - Mutant Ape Yacht.png"
+                            class="rounded-circle"
+                            style="height: 3rem; width: 3rem"
+                            alt="Mutant Ape Yacht"
+                        />
+                        </td>
+                        <td class="align-middle">
+                        <h6>Mutant Ape Yacht</h6>
+                        </td>
+                        <td class="align-middle">
+                        <h6>23.6</h6>
+                        </td>
+                    </tr>
+                    <!-- 3 -->
+                    <tr>
+                        <td class="align-middle">3</td>
+                        <td>
+                        <img
+                            src="./assets/NFT/3 - Kaizoku Mechanics.jpg"
+                            class="rounded-circle"
+                            style="height: 3rem; width: 3rem"
+                            alt="Kaizoku Mechanics"
+                        />
+                        </td>
+                        <td class="align-middle">
+                        <h6>Kaizoku Mechancics</h6>
+                        </td>
+                        <td class="align-middle">
+                        <h6>20.12</h6>
+                        </td>
+                    </tr>
+                    <!-- 4 -->
+                    <tr>
+                        <td class="align-middle">4</td>
+                        <td>
+                        <img
+                            src="./assets/NFT/4 - nft-from-cryptopunk-collection-was-mistakenly-sold-for-less-than-0.01.jpg"
+                            class="rounded-circle"
+                            style="height: 3rem; width: 3rem"
+                            alt="CryptoPunk NFT"
+                        />
+                        </td>
+                        <td class="align-middle">
+                        <h6>CryptoPunk NFT</h6>
+                        </td>
+                        <td class="align-middle">
+                        <h6>19.94</h6>
+                        </td>
+                    </tr>
+                    <!-- 5 -->
+                    <tr>
+                        <td class="align-middle">5</td>
+                        <td>
+                        <img
+                            src="./assets/NFT/5 - Muri by Haus NFT.webp"
+                            class="rounded-circle"
+                            style="height: 3rem; width: 3rem"
+                            alt="Muri by Haus"
+                        />
+                        </td>
+                        <td class="align-middle">
+                        <h6>Muri by Haus</h6>
+                        </td>
+                        <td class="align-middle">
+                        <h6>0.73</h6>
+                        </td>
+                    </tr>
+                    <!-- 6 -->
+                    <tr>
+                        <td class="align-middle">6</td>
+                        <td>
+                        <img
+                            src="./assets/NFT/6 - Ragnarok Meta NFT.png"
+                            class="rounded-circle"
+                            style="height: 3rem; width: 3rem"
+                            alt="Ragnarok Meta NFT"
+                        />
+                        </td>
+                        <td class="align-middle">
+                        <h6>Ragnarok Meta NFT</h6>
+                        </td>
+                        <td class="align-middle">
+                        <h6>151.23</h6>
+                        </td>
+                    </tr>
+                    <!-- 7 -->
+                    <tr>
+                        <td class="align-middle">7</td>
+                        <td>
+                        <img
+                            src="./assets/NFT/7 - OnChain Monkey NFT.png"
+                            class="rounded-circle"
+                            style="height: 3rem; width: 3rem"
+                            alt="OnChain Monkey NFT"
+                        />
+                        </td>
+                        <td class="align-middle">
+                        <h6>OnChain Monkey NFT</h6>
+                        </td>
+                        <td class="align-middle">
+                        <h6>37.81</h6>
+                        </td>
+                    </tr>
+                    <!-- 8 -->
+                    <tr>
+                        <td class="align-middle">8</td>
+                        <td>
+                        <img
+                            src="./assets/NFT/8 - MoonBird NFT.webp"
+                            class="rounded-circle"
+                            style="height: 3rem; width: 3rem"
+                            alt="MoonBird NFT"
+                        />
+                        </td>
+                        <td class="align-middle">
+                        <h6>MoonBird NFT</h6>
+                        </td>
+                        <td class="align-middle">
+                        <h6>45.61</h6>
+                        </td>
+                    </tr>
+                    <!-- 9 -->
+                    <tr>
+                        <td class="align-middle">9</td>
+                        <td>
+                        <img
+                            src="./assets/NFT/9 - Gutter Cat Gang.png"
+                            class="rounded-circle"
+                            style="height: 3rem; width: 3rem"
+                            alt="Gutter Cat Gang"
+                        />
+                        </td>
+                        <td class="align-middle">
+                        <h6>Gutter Cat Gang</h6>
+                        </td>
+                        <td class="align-middle">
+                        <h6>79.21</h6>
+                        </td>
+                    </tr>
+                    <!-- 10 -->
+                    <tr>
+                        <td class="align-middle">10</td>
+                        <td>
+                        <img
+                            src="./assets/NFT/10 - DeadFellaz NFT.webp"
+                            class="rounded-circle"
+                            style="height: 3rem; width: 3rem"
+                            alt="DeadFellaz NFT"
+                        />
+                        </td>
+                        <td class="align-middle">
+                        <h6>DeadFellaz NFT</h6>
+                        </td>
+                        <td class="align-middle">
+                        <h6>56.41</h6>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+          <ul class="pagination justify-content-center mb-4" id="tablePagination">
+            <li class="page-item">
+              <a class="page-link" href="#">prev</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">4</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">5</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">next</a>
+            </li>
+          </ul>
+        </div>
+      <!-- Table end -->
+      <!-- footer -->
+      <div id="footer">
+        <footer class="text-center text-lg-start text-white bg-primary">
+          <div class="container p-4 pb-0">
+            <section class="">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Adorn</h6>
+                  <p>
+                    Indonesia first and largest digital marketplace for crypto
+                    collectibles and non-fungible tokens (NFT). Buy, sell and
+                    discover exclusive digital items.
+                  </p>
+                </div>
+  
+                <hr class="w-100 clearfix d-md-none" />
+  
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">
+                    MarketPlace
+                  </h6>
+                  <p>
+                    <a class="text-white" style="text-decoration: none"
+                      >All NFT</a
+                    >
+                  </p>
+                  <p>
+                    <a class="text-white" style="text-decoration: none">Art</a>
+                  </p>
+                  <p>
+                    <a class="text-white" style="text-decoration: none"
+                      >Collectibles</a
+                    >
+                  </p>
+                  <p>
+                    <a class="text-white" style="text-decoration: none"
+                      >Domain Names</a
+                    >
+                  </p>
+                  <p>
+                    <a class="text-white" style="text-decoration: none">Music</a>
+                  </p>
+                  <p>
+                    <a class="text-white" style="text-decoration: none"
+                      >Photography</a
+                    >
+                  </p>
+                </div>
+  
+                <hr class="w-100 clearfix d-md-none" />
+  
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Resources</h6>
+                  <p>
+                    <a class="text-white" style="text-decoration: none"
+                      >Help Center</a
+                    >
+                  </p>
+                  <p>
+                    <a class="text-white" style="text-decoration: none"
+                      >Partners</a
+                    >
+                  </p>
+                  <p>
+                    <a class="text-white" style="text-decoration: none">Taxes</a>
+                  </p>
+                  <p>
+                    <a class="text-white" style="text-decoration: none"
+                      >Newsletter</a
+                    >
+                  </p>
+                </div>
+  
+                <hr class="w-100 clearfix d-md-none" />
+  
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                  <p><i class="fa fa-home mr-3"></i>Binus, Kemanggisan, ID</p>
+                  <p><i class="fa fa-envelope mr-3"></i> multimedia@gmail.com</p>
+                  <p><i class="fa fa-phone mr-3"></i> + 12 34 56 78</p>
+                  <p><i class="fa fa-print mr-3"></i> + 12 34 56 78</p>
+                </div>
+              </div>
+            </section>
+  
+            <hr class="my-3" />
+  
+            <!-- Section: Copyright -->
+            <section class="p-3 pt-0">
+              <div class="row d-flex align-items-center">
+                <div class="col-md-7 col-lg-8 text-center text-md-start">
+                  <div class="p-3">
+                    © 2020 Copyright :
+                    <a class="text-white" href="#" style="text-decoration: none"
+                      >MultimediaNFT</a
+                    >
+                  </div>
+                </div>
+  
+                <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                  <!-- Facebook -->
+                  <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    class="text-white"
+                    role="button"
+                    ><i class="fa fa-facebook-f"></i
+                  ></a>
+  
+                  <!-- Twitter -->
+                  <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    class="text-white"
+                    role="button"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+  
+                  <!-- Google -->
+                  <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    class="text-white"
+                    role="button"
+                    ><i class="fa fa-google"></i
+                  ></a>
+  
+                  <!-- Instagram -->
+                  <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    class="text-white"
+                    role="button"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </footer>
+      </div>
+        <!-- footer end -->
+    </body>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
+</html>
+
+<!-- Top Seller Sort -->
+    <script src="./js/auth.js"></script>
+    <script src="./js/global.js"></script>
+<script>
+    $(".dropdown-menu li a").click(function(){
+      $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+      $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+    });
+  </script>
+</body>
+</html>
